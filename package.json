@@ -1,0 +1,13 @@
+{
+  "name": "underground-shift-prototype",
+  "private": true,
+  "version": "0.2.0",
+  "scripts": {
+    "build": "npm run build:scene && npm run build:reactor",
+    "build:scene": "esbuild game/three/scene.js --bundle --format=iife --minify --outfile=vendor/scene3d.js",
+    "build:reactor": "esbuild game/three/bench-reactor.js --bundle --format=iife --minify --outfile=vendor/bench-reactor.js",
+    "test": "node game/engine.test.cjs"
+  },
+  "dependencies": { "three": "0.180.0" },
+  "devDependencies": { "esbuild": "0.25.12" }
+}

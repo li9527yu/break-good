@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>地下班次 · 二维工作台</title>
+<link rel="stylesheet" href="game/bench-2d.css">
+</head>
+<body>
+<main>
+ <header>
+  <h1>反应罐</h1>
+  <div class="header-actions"><button id="sound" class="quiet" aria-pressed="true">音效：开</button><button id="reset" class="quiet">重开一批</button></div>
+ </header>
+ <section class="viewer" aria-label="三维处理仓观察窗">
+  <canvas id="reactor"></canvas>
+  <button id="tank-drop" class="slot tank-drop" data-slot="tank" aria-label="把选中的物料投入三维罐体"><span>投料口</span></button>
+  <div class="viewer-meta"><span id="batch-id"></span></div>
+  <div id="tank-alert" hidden>过载 · 立即降载</div>
+  <p id="reactor-note" hidden>三维观察窗不可用。处理台仍会显示样品状态。</p>
+ </section>
+ <div class="layout">
+  <aside id="materials"><h2>投料</h2><div id="inventory"></div></aside>
+  <section class="bench" aria-labelledby="station">
+   <div class="intro"><h2 id="station"></h2><p id="instruction"></p></div>
+   <div id="surface"></div>
+   <p id="status" role="status">把雾盐拖进罐体，建立基底。</p>
+  </section>
+ </div>
+</main>
+<script src="vendor/interact.min.js"></script>
+<script src="vendor/bench-reactor.js"></script>
+<script src="game/bench-audio.js"></script>
+<script src="game/bench-2d.js"></script>
+</body>
+</html>

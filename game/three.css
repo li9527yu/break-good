@@ -1,0 +1,29 @@
+.room{background:#101b1b;isolation:isolate}.room canvas{display:block;width:100%;height:100%;position:absolute;inset:0;touch-action:manipulation}.room-shade{display:none}#world-labels{position:absolute;inset:0;pointer-events:none;z-index:2}.world-label{position:absolute;transform:translate(-50%,6px);pointer-events:auto;font-size:10px;line-height:1.3;white-space:nowrap;padding:4px 7px;background:#12251bd9;border:1px solid #637b67;color:#d5ddc6;border-radius:3px;box-shadow:0 2px 5px #0006}.world-label.active{background:#d2be80;color:#18251b;border-color:#eee0a6}.world-label:hover{background:#597361;color:#fff}#view-toggle{position:absolute;right:14px;top:14px;font-size:12px;z-index:4;background:#14251ae6}#scene-caption{z-index:3;background:#102119bf;padding:5px 8px}#scene-loading{position:absolute;inset:35% 15%;background:#15261c;padding:25px;z-index:5;text-align:center}#scene-loading[hidden]{display:none}@media(max-width:760px){.world-label{font-size:9px;padding:3px 4px}.room{min-height:440px}#scene-caption{max-width:90%;font-size:9px}#view-toggle{font-size:10px;right:8px;top:8px}}
+
+.camera-tools{position:absolute;right:14px;top:55px;display:flex;gap:6px;z-index:4}.camera-tools button{font-size:11px;padding:6px 9px;background:#182b21e8}.room canvas{touch-action:none}@media(max-width:760px){.camera-tools{right:8px;top:48px;gap:3px}.camera-tools button{font-size:9px;padding:5px}}
+.world-label:not(.active):not(.nearby):not(:focus-visible){opacity:0;pointer-events:none}
+.camera-menu{position:absolute;z-index:5;right:12px;top:12px;background:#15261deb;border:1px solid #526451;border-radius:4px;color:#dfdfc2;padding:6px 9px;font-size:12px}
+.camera-menu summary{cursor:pointer}
+.camera-menu .camera-tools{position:static;display:grid;margin-top:7px;gap:5px}
+.camera-menu #view-toggle{position:static;font-size:inherit}
+.camera-menu small{font-size:10px;color:#aebca6}
+.game-shell{height:100svh;min-height:0;max-width:1440px;padding:8px clamp(8px,2.5vw,28px);gap:8px}
+.game-shell .game-bar{flex-wrap:nowrap;gap:12px;min-height:34px}
+.game-bar .brand{font-size:16px;letter-spacing:.07em;white-space:nowrap}
+.game-bar #day{font-size:12px;color:#bcc29f;margin:0}
+.game-bar #menu-open{margin-left:auto;font-size:12px;padding:4px 10px}
+.game-shell .room{margin:0;min-height:0;border-radius:6px}
+.game-shell .scene-hud{display:flex;justify-content:center;padding:0}
+.game-shell #travel{width:auto;min-width:min(100%,170px);margin:0;text-align:center;background:#d2be80;color:#19251b;border-color:#d2be80}
+.game-shell #scene-caption[hidden]{display:none}
+.game-shell .world-label:not(.active):not(:focus-visible):not(:hover){opacity:0}
+.game-shell .world-label:not(.active):not(.nearby):not(:focus-visible){pointer-events:none}
+#camera-menu{margin:12px 0}
+#camera-menu summary{cursor:pointer}
+#camera-menu .camera-tools{position:static;display:flex;flex-wrap:wrap;margin-top:6px}
+#camera-menu #view-toggle{position:static;font:inherit}
+#menu .menu-actions{margin-top:12px}
+.scene-guide{position:absolute;z-index:3;bottom:14px;left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100% - 28px);margin:0;padding:6px 11px;border:1px solid #7e8763;border-radius:5px;background:#17241dee;color:#e5e4cb;font-size:13px;pointer-events:none;animation:guide-in .2s ease-out}
+.scene-guide[hidden]{display:none}
+@keyframes guide-in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.scene-guide{animation:none}}
